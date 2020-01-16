@@ -1,0 +1,11 @@
+C:\Users\ROES\source\repos\ricardoesousa\treinamento_gft_cs\Desafio04_cs\Desafio04_cs\obj\Debug\netcoreapp3.1\Desafio04_cs.csprojAssemblyReference.cache
+C:\Users\ROES\source\repos\ricardoesousa\treinamento_gft_cs\Desafio04_cs\Desafio04_cs\obj\Debug\netcoreapp3.1\Desafio04_cs.AssemblyInfoInputs.cache
+C:\Users\ROES\source\repos\ricardoesousa\treinamento_gft_cs\Desafio04_cs\Desafio04_cs\obj\Debug\netcoreapp3.1\Desafio04_cs.AssemblyInfo.cs
+C:\Users\ROES\source\repos\ricardoesousa\treinamento_gft_cs\Desafio04_cs\Desafio04_cs\bin\Debug\netcoreapp3.1\Desafio04_cs.exe
+C:\Users\ROES\source\repos\ricardoesousa\treinamento_gft_cs\Desafio04_cs\Desafio04_cs\bin\Debug\netcoreapp3.1\Desafio04_cs.deps.json
+C:\Users\ROES\source\repos\ricardoesousa\treinamento_gft_cs\Desafio04_cs\Desafio04_cs\bin\Debug\netcoreapp3.1\Desafio04_cs.runtimeconfig.json
+C:\Users\ROES\source\repos\ricardoesousa\treinamento_gft_cs\Desafio04_cs\Desafio04_cs\bin\Debug\netcoreapp3.1\Desafio04_cs.runtimeconfig.dev.json
+C:\Users\ROES\source\repos\ricardoesousa\treinamento_gft_cs\Desafio04_cs\Desafio04_cs\bin\Debug\netcoreapp3.1\Desafio04_cs.dll
+C:\Users\ROES\source\repos\ricardoesousa\treinamento_gft_cs\Desafio04_cs\Desafio04_cs\bin\Debug\netcoreapp3.1\Desafio04_cs.pdb
+C:\Users\ROES\source\repos\ricardoesousa\treinamento_gft_cs\Desafio04_cs\Desafio04_cs\obj\Debug\netcoreapp3.1\Desafio04_cs.dll
+C:\Users\ROES\source\repos\ricardoesousa\treinamento_gft_cs\Desafio04_cs\Desafio04_cs\obj\Debug\netcoreapp3.1\Desafio04_cs.pdb
