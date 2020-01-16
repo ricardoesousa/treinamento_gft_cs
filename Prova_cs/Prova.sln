@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29613.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Prova_parte1", "Prova\Prova_parte1.csproj", "{95B467C7-3778-40F2-AC09-54EA2CC702EC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Prova_parte2", "Prova_parte2\Prova_parte2.csproj", "{5F83FCF4-1117-43E0-83C1-68B3293779E7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{95B467C7-3778-40F2-AC09-54EA2CC702EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{95B467C7-3778-40F2-AC09-54EA2CC702EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{95B467C7-3778-40F2-AC09-54EA2CC702EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{95B467C7-3778-40F2-AC09-54EA2CC702EC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5F83FCF4-1117-43E0-83C1-68B3293779E7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5F83FCF4-1117-43E0-83C1-68B3293779E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5F83FCF4-1117-43E0-83C1-68B3293779E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5F83FCF4-1117-43E0-83C1-68B3293779E7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {06D1B8D4-C04B-4E2E-B433-F2F68CBE71F3}
+	EndGlobalSection
+EndGlobal

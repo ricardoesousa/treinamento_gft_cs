@@ -1,0 +1,11 @@
+C:\Users\ROES\source\repos\Prova\Prova_parte2\bin\Debug\netcoreapp3.1\Prova_parte2.exe
+C:\Users\ROES\source\repos\Prova\Prova_parte2\bin\Debug\netcoreapp3.1\Prova_parte2.deps.json
+C:\Users\ROES\source\repos\Prova\Prova_parte2\bin\Debug\netcoreapp3.1\Prova_parte2.runtimeconfig.json
+C:\Users\ROES\source\repos\Prova\Prova_parte2\bin\Debug\netcoreapp3.1\Prova_parte2.runtimeconfig.dev.json
+C:\Users\ROES\source\repos\Prova\Prova_parte2\bin\Debug\netcoreapp3.1\Prova_parte2.dll
+C:\Users\ROES\source\repos\Prova\Prova_parte2\bin\Debug\netcoreapp3.1\Prova_parte2.pdb
+C:\Users\ROES\source\repos\Prova\Prova_parte2\obj\Debug\netcoreapp3.1\Prova_parte2.csprojAssemblyReference.cache
+C:\Users\ROES\source\repos\Prova\Prova_parte2\obj\Debug\netcoreapp3.1\Prova_parte2.AssemblyInfoInputs.cache
+C:\Users\ROES\source\repos\Prova\Prova_parte2\obj\Debug\netcoreapp3.1\Prova_parte2.AssemblyInfo.cs
+C:\Users\ROES\source\repos\Prova\Prova_parte2\obj\Debug\netcoreapp3.1\Prova_parte2.dll
+C:\Users\ROES\source\repos\Prova\Prova_parte2\obj\Debug\netcoreapp3.1\Prova_parte2.pdb
