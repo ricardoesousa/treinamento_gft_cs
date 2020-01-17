@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ROES\\source\\repos\\ricardoesousa\\treinamento_gft_cs\\Desafio04_cs\\Desafio04_cs\\Desafio04_cs.csproj": {}
+    "C:\\Users\\ROES\\Desktop\\treinamento_gft_cs\\Desafio04_cs\\Desafio04_cs.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ROES\\source\\repos\\ricardoesousa\\treinamento_gft_cs\\Desafio04_cs\\Desafio04_cs\\Desafio04_cs.csproj": {
+    "C:\\Users\\ROES\\Desktop\\treinamento_gft_cs\\Desafio04_cs\\Desafio04_cs.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ROES\\source\\repos\\ricardoesousa\\treinamento_gft_cs\\Desafio04_cs\\Desafio04_cs\\Desafio04_cs.csproj",
+        "projectUniqueName": "C:\\Users\\ROES\\Desktop\\treinamento_gft_cs\\Desafio04_cs\\Desafio04_cs.csproj",
         "projectName": "Desafio04_cs",
-        "projectPath": "C:\\Users\\ROES\\source\\repos\\ricardoesousa\\treinamento_gft_cs\\Desafio04_cs\\Desafio04_cs\\Desafio04_cs.csproj",
+        "projectPath": "C:\\Users\\ROES\\Desktop\\treinamento_gft_cs\\Desafio04_cs\\Desafio04_cs.csproj",
         "packagesPath": "C:\\Users\\ROES\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ROES\\source\\repos\\ricardoesousa\\treinamento_gft_cs\\Desafio04_cs\\Desafio04_cs\\obj\\",
+        "outputPath": "C:\\Users\\ROES\\Desktop\\treinamento_gft_cs\\Desafio04_cs\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ROES\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -52,7 +52,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
         }
       }
     }
