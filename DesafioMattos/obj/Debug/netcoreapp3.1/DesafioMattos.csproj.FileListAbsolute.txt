@@ -1,0 +1,11 @@
+C:\Users\ROES\Desktop\treinamento_gft_cs\DesafioMattos\obj\Debug\netcoreapp3.1\DesafioMattos.csprojAssemblyReference.cache
+C:\Users\ROES\Desktop\treinamento_gft_cs\DesafioMattos\obj\Debug\netcoreapp3.1\DesafioMattos.AssemblyInfoInputs.cache
+C:\Users\ROES\Desktop\treinamento_gft_cs\DesafioMattos\obj\Debug\netcoreapp3.1\DesafioMattos.AssemblyInfo.cs
+C:\Users\ROES\Desktop\treinamento_gft_cs\DesafioMattos\bin\Debug\netcoreapp3.1\DesafioMattos.exe
+C:\Users\ROES\Desktop\treinamento_gft_cs\DesafioMattos\bin\Debug\netcoreapp3.1\DesafioMattos.deps.json
+C:\Users\ROES\Desktop\treinamento_gft_cs\DesafioMattos\bin\Debug\netcoreapp3.1\DesafioMattos.runtimeconfig.json
+C:\Users\ROES\Desktop\treinamento_gft_cs\DesafioMattos\bin\Debug\netcoreapp3.1\DesafioMattos.runtimeconfig.dev.json
+C:\Users\ROES\Desktop\treinamento_gft_cs\DesafioMattos\bin\Debug\netcoreapp3.1\DesafioMattos.dll
+C:\Users\ROES\Desktop\treinamento_gft_cs\DesafioMattos\bin\Debug\netcoreapp3.1\DesafioMattos.pdb
+C:\Users\ROES\Desktop\treinamento_gft_cs\DesafioMattos\obj\Debug\netcoreapp3.1\DesafioMattos.dll
+C:\Users\ROES\Desktop\treinamento_gft_cs\DesafioMattos\obj\Debug\netcoreapp3.1\DesafioMattos.pdb
