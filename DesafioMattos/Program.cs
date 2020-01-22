@@ -7,17 +7,25 @@ namespace DesafioMattos
         static void Main(string[] args)
         {
             Console.WriteLine("Selecione uma linguagem:");
-            Console.WriteLine("'en' para English");
-            Console.WriteLine("'sp' para Spanish");
-            Console.WriteLine("'de' para German");
-
-            string language = Console.ReadLine();
+            Console.WriteLine("1 para Inglês");
+            Console.WriteLine("2 para Espanhol");
+            Console.WriteLine("3 para Alemão");
 
             FabricaAlo fabrica = new FabricaAlo();
+            AloMundo aloMundo;
+ 
+            do
+            {
+                int selecao = Convert.ToInt32(Console.ReadLine());
+                aloMundo = fabrica.CriaAloMundo(selecao);
+                if (aloMundo == null)
+                {
+                    Console.WriteLine("Escolha um opção válida!");
+                }
+            }
+            while (aloMundo == null);
 
-            AloMundo a = fabrica.CriaAloMundo(language);
-
-            a.falaAlo();
+            aloMundo.falaAlo();
         }
     }
 
@@ -26,7 +34,7 @@ namespace DesafioMattos
         public void falaAlo();
     }
 
-    public class English : AloMundo
+    public class Ingles : AloMundo
     {
         public void falaAlo()
         {
@@ -34,7 +42,7 @@ namespace DesafioMattos
         }
     }
 
-    public class Spanish : AloMundo
+    public class Espanhol : AloMundo
     {
         public void falaAlo()
         {
@@ -42,7 +50,7 @@ namespace DesafioMattos
         }
     }
 
-    public class German : AloMundo
+    public class Alemao : AloMundo
     {
         public void falaAlo()
         {
@@ -52,16 +60,17 @@ namespace DesafioMattos
 
     public class FabricaAlo
     {
-        public AloMundo CriaAloMundo(string language)
+        
+        public AloMundo CriaAloMundo(int selecao)
         {
-            switch (language)
+            switch (selecao)
             {
-                case "en":
-                    return new English();
-                case "sp":
-                    return new Spanish();
-                case "de":
-                    return new German();
+                case 1:
+                    return new Ingles();
+                case 2:
+                    return new Espanhol();
+                case 3:
+                    return new Alemao();
                 default:
                     return null;
             }

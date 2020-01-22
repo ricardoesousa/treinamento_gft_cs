@@ -15,11 +15,11 @@ namespace DesafioMattos2
 
     public interface FabricaDePizza
     {
-        Pizza CriarPizza(string sabor);
+        public Pizza CriarPizza(string sabor);
     }
 
 
-    public class Pizzaria_SP, FabricaDePizza
+    public class Pizzaria_SP: FabricaDePizza
     {
         public Pizza CriarPizza(string sabor)
         {
