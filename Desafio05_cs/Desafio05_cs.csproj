@@ -5,14 +5,14 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="img\**" />
     <Compile Remove="wwwroot\NewFolder\**" />
+    <Content Remove="img\**" />
     <Content Remove="wwwroot\NewFolder\**" />
+    <EmbeddedResource Remove="img\**" />
     <EmbeddedResource Remove="wwwroot\NewFolder\**" />
+    <None Remove="img\**" />
     <None Remove="wwwroot\NewFolder\**" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="img\" />
   </ItemGroup>
 
   <ItemGroup>

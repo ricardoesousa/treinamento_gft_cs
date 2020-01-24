@@ -1,5 +1,6 @@
 C:\Users\ROES\Desktop\treinamento_gft_cs\Desafio05_cs\bin\Debug\netcoreapp3.1\appsettings.Development.json
 C:\Users\ROES\Desktop\treinamento_gft_cs\Desafio05_cs\bin\Debug\netcoreapp3.1\appsettings.json
+C:\Users\ROES\Desktop\treinamento_gft_cs\Desafio05_cs\bin\Debug\netcoreapp3.1\libman.json
 C:\Users\ROES\Desktop\treinamento_gft_cs\Desafio05_cs\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
 C:\Users\ROES\Desktop\treinamento_gft_cs\Desafio05_cs\bin\Debug\netcoreapp3.1\Desafio05_cs.exe
 C:\Users\ROES\Desktop\treinamento_gft_cs\Desafio05_cs\bin\Debug\netcoreapp3.1\Desafio05_cs.deps.json
@@ -9,7 +10,6 @@ C:\Users\ROES\Desktop\treinamento_gft_cs\Desafio05_cs\bin\Debug\netcoreapp3.1\De
 C:\Users\ROES\Desktop\treinamento_gft_cs\Desafio05_cs\bin\Debug\netcoreapp3.1\Desafio05_cs.pdb
 C:\Users\ROES\Desktop\treinamento_gft_cs\Desafio05_cs\bin\Debug\netcoreapp3.1\Desafio05_cs.Views.dll
 C:\Users\ROES\Desktop\treinamento_gft_cs\Desafio05_cs\bin\Debug\netcoreapp3.1\Desafio05_cs.Views.pdb
-C:\Users\ROES\Desktop\treinamento_gft_cs\Desafio05_cs\obj\Debug\netcoreapp3.1\Desafio05_cs.csprojAssemblyReference.cache
 C:\Users\ROES\Desktop\treinamento_gft_cs\Desafio05_cs\obj\Debug\netcoreapp3.1\staticwebassets\Desafio05_cs.StaticWebAssets.Manifest.cache
 C:\Users\ROES\Desktop\treinamento_gft_cs\Desafio05_cs\obj\Debug\netcoreapp3.1\staticwebassets\Desafio05_cs.StaticWebAssets.xml
 C:\Users\ROES\Desktop\treinamento_gft_cs\Desafio05_cs\obj\Debug\netcoreapp3.1\Desafio05_cs.MvcApplicationPartsAssemblyInfo.cache
@@ -20,7 +20,10 @@ C:\Users\ROES\Desktop\treinamento_gft_cs\Desafio05_cs\obj\Debug\netcoreapp3.1\De
 C:\Users\ROES\Desktop\treinamento_gft_cs\Desafio05_cs\obj\Debug\netcoreapp3.1\Desafio05_cs.TagHelpers.input.cache
 C:\Users\ROES\Desktop\treinamento_gft_cs\Desafio05_cs\obj\Debug\netcoreapp3.1\Desafio05_cs.TagHelpers.output.cache
 C:\Users\ROES\Desktop\treinamento_gft_cs\Desafio05_cs\obj\Debug\netcoreapp3.1\Desafio05_cs.RazorCoreGenerate.cache
+C:\Users\ROES\Desktop\treinamento_gft_cs\Desafio05_cs\obj\Debug\netcoreapp3.1\Razor\Views\Home\Contact.cshtml.g.cs
 C:\Users\ROES\Desktop\treinamento_gft_cs\Desafio05_cs\obj\Debug\netcoreapp3.1\Razor\Views\Home\Index.cshtml.g.cs
+C:\Users\ROES\Desktop\treinamento_gft_cs\Desafio05_cs\obj\Debug\netcoreapp3.1\Razor\Views\Home\Projects.cshtml.g.cs
+C:\Users\ROES\Desktop\treinamento_gft_cs\Desafio05_cs\obj\Debug\netcoreapp3.1\Razor\Views\Home\Skills.cshtml.g.cs
 C:\Users\ROES\Desktop\treinamento_gft_cs\Desafio05_cs\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Error.cshtml.g.cs
 C:\Users\ROES\Desktop\treinamento_gft_cs\Desafio05_cs\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Layout.cshtml.g.cs
 C:\Users\ROES\Desktop\treinamento_gft_cs\Desafio05_cs\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
@@ -32,7 +35,3 @@ C:\Users\ROES\Desktop\treinamento_gft_cs\Desafio05_cs\obj\Debug\netcoreapp3.1\De
 C:\Users\ROES\Desktop\treinamento_gft_cs\Desafio05_cs\obj\Debug\netcoreapp3.1\Desafio05_cs.dll
 C:\Users\ROES\Desktop\treinamento_gft_cs\Desafio05_cs\obj\Debug\netcoreapp3.1\Desafio05_cs.pdb
 C:\Users\ROES\Desktop\treinamento_gft_cs\Desafio05_cs\obj\Debug\netcoreapp3.1\Desafio05_cs.csproj.CopyComplete
-C:\Users\ROES\Desktop\treinamento_gft_cs\Desafio05_cs\obj\Debug\netcoreapp3.1\Razor\Views\Home\Projects.cshtml.g.cs
-C:\Users\ROES\Desktop\treinamento_gft_cs\Desafio05_cs\obj\Debug\netcoreapp3.1\Razor\Views\Home\Contact.cshtml.g.cs
-C:\Users\ROES\Desktop\treinamento_gft_cs\Desafio05_cs\obj\Debug\netcoreapp3.1\Razor\Views\Home\Skills.cshtml.g.cs
-C:\Users\ROES\Desktop\treinamento_gft_cs\Desafio05_cs\bin\Debug\netcoreapp3.1\libman.json
