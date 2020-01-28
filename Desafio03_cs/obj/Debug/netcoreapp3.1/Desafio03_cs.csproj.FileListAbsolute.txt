@@ -1,0 +1,11 @@
+C:\Users\ROES\Desktop\treinamento_gft_cs\Desafio03_cs\bin\Debug\netcoreapp3.1\Desafio03_cs.exe
+C:\Users\ROES\Desktop\treinamento_gft_cs\Desafio03_cs\bin\Debug\netcoreapp3.1\Desafio03_cs.deps.json
+C:\Users\ROES\Desktop\treinamento_gft_cs\Desafio03_cs\bin\Debug\netcoreapp3.1\Desafio03_cs.runtimeconfig.json
+C:\Users\ROES\Desktop\treinamento_gft_cs\Desafio03_cs\bin\Debug\netcoreapp3.1\Desafio03_cs.runtimeconfig.dev.json
+C:\Users\ROES\Desktop\treinamento_gft_cs\Desafio03_cs\bin\Debug\netcoreapp3.1\Desafio03_cs.dll
+C:\Users\ROES\Desktop\treinamento_gft_cs\Desafio03_cs\bin\Debug\netcoreapp3.1\Desafio03_cs.pdb
+C:\Users\ROES\Desktop\treinamento_gft_cs\Desafio03_cs\obj\Debug\netcoreapp3.1\Desafio03_cs.csprojAssemblyReference.cache
+C:\Users\ROES\Desktop\treinamento_gft_cs\Desafio03_cs\obj\Debug\netcoreapp3.1\Desafio03_cs.AssemblyInfoInputs.cache
+C:\Users\ROES\Desktop\treinamento_gft_cs\Desafio03_cs\obj\Debug\netcoreapp3.1\Desafio03_cs.AssemblyInfo.cs
+C:\Users\ROES\Desktop\treinamento_gft_cs\Desafio03_cs\obj\Debug\netcoreapp3.1\Desafio03_cs.dll
+C:\Users\ROES\Desktop\treinamento_gft_cs\Desafio03_cs\obj\Debug\netcoreapp3.1\Desafio03_cs.pdb

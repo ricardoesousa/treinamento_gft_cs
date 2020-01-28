@@ -35,3 +35,4 @@ C:\Users\ROES\Desktop\treinamento_gft_cs\Desafio05_cs\obj\Debug\netcoreapp3.1\De
 C:\Users\ROES\Desktop\treinamento_gft_cs\Desafio05_cs\obj\Debug\netcoreapp3.1\Desafio05_cs.dll
 C:\Users\ROES\Desktop\treinamento_gft_cs\Desafio05_cs\obj\Debug\netcoreapp3.1\Desafio05_cs.pdb
 C:\Users\ROES\Desktop\treinamento_gft_cs\Desafio05_cs\obj\Debug\netcoreapp3.1\Desafio05_cs.csproj.CopyComplete
+C:\Users\ROES\Desktop\treinamento_gft_cs\Desafio05_cs\obj\Debug\netcoreapp3.1\Desafio05_cs.csprojAssemblyReference.cache
