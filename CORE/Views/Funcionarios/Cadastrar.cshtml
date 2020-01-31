@@ -1,0 +1,10 @@
+@model CORE.Models.Funcionario
+<h2>Cadastro de Funcionários</h2>
+
+<form class="form-horizontal" asp-asp-controller="Funcionarios" asp-action="Salvar" method="POST">
+    <input type="text" class="form-control" asp-for="Nome" placeholder="Nome">
+    <input type="number" class="form-control" asp-for="Salario" placeholder="Salário">
+    <input type="text" class="form-control" asp-for="Cpf" placeholder="CPF">
+    <button class="btn btn-success">Cadastrar</button>
+
+</form>
