@@ -55,3 +55,4 @@ C:\Users\ROES\Desktop\treinamento_gft_cs\CORE\bin\Debug\netcoreapp3.1\Microsoft.
 C:\Users\ROES\Desktop\treinamento_gft_cs\CORE\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Primitives.dll
 C:\Users\ROES\Desktop\treinamento_gft_cs\CORE\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Design.dll
 C:\Users\ROES\Desktop\treinamento_gft_cs\CORE\obj\Debug\netcoreapp3.1\Razor\Views\Funcionarios\Cadastrar.cshtml.g.cs
+C:\Users\ROES\Desktop\treinamento_gft_cs\CORE\obj\Debug\netcoreapp3.1\Razor\Views\Funcionarios\Index.cshtml.g.cs
