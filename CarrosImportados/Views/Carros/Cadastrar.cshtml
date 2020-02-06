@@ -1,0 +1,13 @@
+@model CarrosImportados.Models.Carro
+
+<h2>Cadastro de Carros</h2>
+
+<form class= "form-horizontal" asp-controller="Carros" asp-action="Salvar" method="POST">
+    <input type="text" class="form-control" asp-for="Modelo" placeholder="Modelo">
+    <input type="text" class="form-control" asp-for="Marca" placeholder="Marca">
+    <input type="text" class="form-control" asp-for="Cor" placeholder="Cor">
+    <input type="number" class="form-control" asp-for="Ano" placeholder="Ano">
+    <input type="text" class="form-control" asp-for="Sobre" placeholder="Sobre">
+    <button class="btn btn-success">Salvar</button>
+
+</form>
