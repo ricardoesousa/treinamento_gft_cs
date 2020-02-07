@@ -30,7 +30,6 @@ C:\Users\ROES\Desktop\treinamento_gft_cs\CarrosImportados\obj\Debug\netcoreapp3.
 C:\Users\ROES\Desktop\treinamento_gft_cs\CarrosImportados\obj\Debug\netcoreapp3.1\CarrosImportados.TagHelpers.output.cache
 C:\Users\ROES\Desktop\treinamento_gft_cs\CarrosImportados\obj\Debug\netcoreapp3.1\CarrosImportados.RazorCoreGenerate.cache
 C:\Users\ROES\Desktop\treinamento_gft_cs\CarrosImportados\obj\Debug\netcoreapp3.1\Razor\Views\Home\Index.cshtml.g.cs
-C:\Users\ROES\Desktop\treinamento_gft_cs\CarrosImportados\obj\Debug\netcoreapp3.1\Razor\Views\Home\Privacy.cshtml.g.cs
 C:\Users\ROES\Desktop\treinamento_gft_cs\CarrosImportados\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Error.cshtml.g.cs
 C:\Users\ROES\Desktop\treinamento_gft_cs\CarrosImportados\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Layout.cshtml.g.cs
 C:\Users\ROES\Desktop\treinamento_gft_cs\CarrosImportados\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
@@ -55,3 +54,4 @@ C:\Users\ROES\Desktop\treinamento_gft_cs\CarrosImportados\bin\Debug\netcoreapp3.
 C:\Users\ROES\Desktop\treinamento_gft_cs\CarrosImportados\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Options.dll
 C:\Users\ROES\Desktop\treinamento_gft_cs\CarrosImportados\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Primitives.dll
 C:\Users\ROES\Desktop\treinamento_gft_cs\CarrosImportados\obj\Debug\netcoreapp3.1\Razor\Views\Carros\Cadastrar.cshtml.g.cs
+C:\Users\ROES\Desktop\treinamento_gft_cs\CarrosImportados\obj\Debug\netcoreapp3.1\Razor\Views\Carros\Index.cshtml.g.cs

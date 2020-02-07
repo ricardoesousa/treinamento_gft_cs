@@ -20531,8 +20531,8 @@
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\ROES\\Desktop\\treinamento_gft_cs\\CarrosImportados\\Views\\Home\\Privacy.cshtml",
-      "TargetPath": "Views\\Home\\Privacy.cshtml",
+      "FilePath": "c:\\Users\\ROES\\Desktop\\treinamento_gft_cs\\CarrosImportados\\Views\\Carros\\Index.cshtml",
+      "TargetPath": "Views\\Carros\\Index.cshtml",
       "FileKind": "mvc"
     },
     {

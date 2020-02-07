@@ -1,0 +1,36 @@
+@model IEnumerable<CarrosImportados.Models.Carro>
+
+    <h2 class="text-center jumbotron">Carros Cadastrados</h2>
+
+    <div class="text-right">
+    <a href="/Carros/Cadastrar" class="btn btn-info">Cadastrar Novo Carro</a>
+    </div>
+    <hr>
+
+    @foreach (var carro in Model)
+    {
+        <div class="container row">
+
+            <div class="col-sm-3">
+                <p>@carro.Imagem</p>
+            </div>
+
+            <div class="col-sm-3">
+                <p><b>Modelo: </b>@carro.Modelo</p>
+                <p><b>Marca: </b>@carro.Marca</p>
+                <p><b>Cor: </b>@carro.Cor</p>
+                <p><b>Ano: </b>@carro.Ano</p>
+            </div>
+
+            <div class="col-sm-3">
+                <p><b>Sobre:</b></p>
+                <p>@carro.Sobre</p>
+            </div>
+
+                <div class="col-sm-3 text-right">
+                <a href="/Carros/Editar/@carro.Id" class="btn btn-warning">Editar</a>
+                <a href="/Carros/Excluir/@carro.Id" class="btn btn-danger">Excluir</a>
+            </div>
+        </div>
+        <hr>
+    }

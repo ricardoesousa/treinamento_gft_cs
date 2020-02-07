@@ -1,6 +1,7 @@
 using CarrosImportados.Models;
 using Microsoft.AspNetCore.Mvc;
 using CarrosImportados.Database;
+using System.Linq;
 
 namespace CarrosImportados.Controllers
 {
@@ -16,14 +17,44 @@ namespace CarrosImportados.Controllers
             return View();
         }
 
+        public IActionResult Editar(int id)
+        {
+            var carro = database.Carros.First(registro => registro.Id == id);
+            return View("Cadastrar", carro);
+        }
 
+        public IActionResult Index()
+        {
+            var carros = database.Carros.ToList();
+            return View(carros);
+        }
+
+        public IActionResult Excluir(Carro carro)
+        {
+            database.Carros.Remove(carro);
+            database.SaveChanges();
+            return RedirectToAction("Index");
+        }
 
         [HttpPost]
         public IActionResult Salvar(Carro carro)
         {
-            database.Carros.Add(carro);
+            if (carro.Id == 0)
+            {
+                database.Carros.Add(carro);
+            }
+            else
+            {
+                var carroDoBanco = database.Carros.First(registro => registro.Id == carro.Id);
+                carroDoBanco.Modelo = carro.Modelo;
+                carroDoBanco.Marca = carro.Marca;
+                carroDoBanco.Cor = carro.Cor;
+                carroDoBanco.Ano = carro.Ano;
+                carroDoBanco.Sobre = carro.Sobre;
+                carroDoBanco.Imagem = carro.Imagem;
+            }
             database.SaveChanges();
-            return Content("salvo");
+            return RedirectToAction("Index");
         }
     }
 }

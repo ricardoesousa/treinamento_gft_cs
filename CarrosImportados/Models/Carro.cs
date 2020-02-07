@@ -12,7 +12,7 @@ namespace CarrosImportados.Models
         public string Modelo { get; set; }
 
         [Required(ErrorMessage = "A marca do carro é obrigatório", AllowEmptyStrings = false)]
-        public int Marca { get; set; }
+        public string Marca { get; set; }
         [Required(ErrorMessage = "O modelo do carro é obrigatória", AllowEmptyStrings = false)]
 
         public string Cor { get; set; }
