@@ -3,7 +3,7 @@
 
 <h2>Cadastro de Carros</h2>
 
-<form class= "form-horizontal" asp-controller="Carros" asp-action="Salvar" method="POST">
+<form class= "form-horizontal" asp-controller="Carros" asp-action="Salvar" method="POST" enctype="multipart/form-data">
     <div class="form-group">
 
     <input type="text" class="form-control" asp-for="Modelo" placeholder="Modelo">
@@ -21,7 +21,7 @@
     <input type="text" class="form-control" asp-for="Sobre" placeholder="Sobre">
     </div>
     <div class="form-group">
-    <input type="file" class="form-group-file" id="Imagem">
+    <input type="file" class="form-group-file" asp-for="Imagem" name="files">
     <small id="imgHelp" class="form-text text-muted">Faça o upload de uma imagem.</small>
     </div>
 
