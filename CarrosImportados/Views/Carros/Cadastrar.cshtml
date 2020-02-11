@@ -5,8 +5,9 @@
 
 <form class= "form-horizontal" asp-controller="Carros" asp-action="Salvar" method="POST" enctype="multipart/form-data">
     <div class="form-group">
-
+    <input type="text" asp-for="Id">
     <input type="text" class="form-control" asp-for="Modelo" placeholder="Modelo">
+    <span asp-for-validation="Modelo"></span>
     </div>
     <div class="form-group">
     <input type="text" class="form-control" asp-for="Marca" placeholder="Marca">
@@ -21,8 +22,9 @@
     <input type="text" class="form-control" asp-for="Sobre" placeholder="Sobre">
     </div>
     <div class="form-group">
-    <input type="file" class="form-group-file" asp-for="Imagem" name="files">
-    <small id="imgHelp" class="form-text text-muted">Faça o upload de uma imagem no formato JPEG/PNG.</small>
+    <input type="file" class="form-group-file" asp-for="Imagem" name="files" accept="image/png, image/jpg, image/jpeg" >
+    <span asp-for-validation="Imagem"></span>
+    <small id="imgHelp" class="form-text text-muted">Faça o upload de uma imagem no formato JPEG/JPG/PNG.</small>
     </div>
 
     <button class="btn btn-success">Salvar</button>

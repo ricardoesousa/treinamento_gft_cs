@@ -26,7 +26,7 @@ namespace CarrosImportados.Controllers
 
         public IActionResult Editar(int id)
         {
-            var carro = database.Carros.First(registro => registro.Id == id);
+            Carro carro = database.Carros.First(registro => registro.Id == id);
             return View("Cadastrar", carro);
         }
 
@@ -81,23 +81,32 @@ namespace CarrosImportados.Controllers
 
         public IActionResult Salvar(Carro carro, IFormFile files)
         {
-
-
             if (carro.Id == 0)
             {
+
+                var nextId = database.Carros.ToList().Last().Id + 1;
                 var uploads = Path.Combine(_hostingEnvironment.WebRootPath, "uploads");
                 if (files.Length > 0)
                 {
-                    var filePath = Path.Combine(uploads, files.FileName);
-                    using (var fileStream = new FileStream(filePath, FileMode.Create))
+                    var extensao = Path.GetExtension(files.FileName).ToLower();
+                    if (extensao == ".jpg" || extensao == ".jpeg" || extensao == ".png")
                     {
-                        files.CopyTo(fileStream);
+                        var filePath = Path.Combine(uploads, nextId + extensao);
+                        using (var fileStream = new FileStream(filePath, FileMode.Create))
+                        {
+                            files.CopyTo(fileStream);
+                        }
+                        carro.Imagem = "/uploads/" + nextId + extensao;
+                        database.Carros.Add(carro);
                     }
-                    carro.Imagem = "/uploads/" + files.FileName;
                 }
-                database.Carros.Add(carro);
+                else
+                {
+                    
+                }
             }
             else
+
             {
                 var carroDoBanco = database.Carros.First(registro => registro.Id == carro.Id);
                 carroDoBanco.Modelo = carro.Modelo;
@@ -105,9 +114,20 @@ namespace CarrosImportados.Controllers
                 carroDoBanco.Cor = carro.Cor;
                 carroDoBanco.Ano = carro.Ano;
                 carroDoBanco.Sobre = carro.Sobre;
-                carroDoBanco.Imagem = carro.Imagem;
+
+                var uploads = Path.Combine(_hostingEnvironment.WebRootPath, "uploads");
+                if (files.Length > 0)
+                {
+                    var filePath = Path.Combine(uploads, files.ContentType);
+                    using (var fileStream = new FileStream(filePath, FileMode.Create))
+                    {
+                        files.CopyTo(fileStream);
+                    }
+                    carroDoBanco.Imagem = "/uploads/" + files.FileName;
+                }
             }
             database.SaveChanges();
+            //@ViewData("Mensagem");
             return RedirectToAction("Index");
         }
     }
