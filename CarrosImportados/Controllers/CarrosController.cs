@@ -81,19 +81,20 @@ namespace CarrosImportados.Controllers
 
         public IActionResult Salvar(Carro carro, IFormFile files)
         {
-            var uploads = Path.Combine(_hostingEnvironment.WebRootPath, "uploads");
-            if (files.Length > 0)
-            {
-                var filePath = Path.Combine(uploads, files.FileName);
-                using (var fileStream = new FileStream(filePath, FileMode.Create))
-                {
-                    files.CopyTo(fileStream);
-                }
-                carro.Imagem = "/uploads/" + files.FileName;
-            }
+
 
             if (carro.Id == 0)
             {
+                var uploads = Path.Combine(_hostingEnvironment.WebRootPath, "uploads");
+                if (files.Length > 0)
+                {
+                    var filePath = Path.Combine(uploads, files.FileName);
+                    using (var fileStream = new FileStream(filePath, FileMode.Create))
+                    {
+                        files.CopyTo(fileStream);
+                    }
+                    carro.Imagem = "/uploads/" + files.FileName;
+                }
                 database.Carros.Add(carro);
             }
             else
