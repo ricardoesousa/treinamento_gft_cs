@@ -36,8 +36,10 @@ namespace CarrosImportados.Controllers
             return View(carros);
         }
 
-        public IActionResult Excluir(Carro carro)
+        public IActionResult Excluir(int id)
         {
+            Carro carro = database.Carros.First(registro => registro.Id == id);
+            System.IO.File.Delete(Path.Combine(_hostingEnvironment.WebRootPath + carro.Imagem));
             database.Carros.Remove(carro);
             database.SaveChanges();
             return RedirectToAction("Index");
@@ -48,7 +50,7 @@ namespace CarrosImportados.Controllers
         /*
         public async Task<IActionResult> Salvar(Carro carro, IList<IFormFile> files)
         {
-            var uploads = Path.Combine(_hostingEnvironment.WebRootPath, "uploads");
+            var uploads = Path.Combine(_hostingEnvironment.WebRootPath, "uploads");dotnet
             foreach (var file in files)
             {
                 if (file.Length > 0)
@@ -114,6 +116,7 @@ namespace CarrosImportados.Controllers
                 carroDoBanco.Cor = carro.Cor;
                 carroDoBanco.Ano = carro.Ano;
                 carroDoBanco.Sobre = carro.Sobre;
+                carroDoBanco.Imagem = carro.imagem;
 
                 var uploads = Path.Combine(_hostingEnvironment.WebRootPath, "uploads");
                 if (files.Length > 0)
@@ -122,7 +125,7 @@ namespace CarrosImportados.Controllers
                     using (var fileStream = new FileStream(filePath, FileMode.Create))
                     {
                         files.CopyTo(fileStream);
-                    }
+                    } 
                     carroDoBanco.Imagem = "/uploads/" + files.FileName;
                 }
             }
