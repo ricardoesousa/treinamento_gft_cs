@@ -27,7 +27,7 @@ namespace CarrosImportados.Controllers
         public IActionResult Editar(int id)
         {
             Carro carro = database.Carros.First(registro => registro.Id == id);
-            return View("Cadastrar", carro);
+            return View("Editar", carro);
         }
 
         public IActionResult Index()
@@ -46,91 +46,55 @@ namespace CarrosImportados.Controllers
         }
 
         [HttpPost]
-
-        /*
-        public async Task<IActionResult> Salvar(Carro carro, IList<IFormFile> files)
+        public IActionResult Salvar(Carro carro, IFormFile files, int id)
         {
-            var uploads = Path.Combine(_hostingEnvironment.WebRootPath, "uploads");dotnet
-            foreach (var file in files)
-            {
-                if (file.Length > 0)
-                {
-                    carro.Imagem = Path.Combine(uploads, file.FileName);
-                    using (var fileStream = new FileStream(carro.Imagem, FileMode.Create))
-                    {
-                        await file.CopyToAsync(fileStream);
-                    }
-                }
-            }
-
             if (carro.Id == 0)
             {
                 database.Carros.Add(carro);
-            }
-            else
-            {
-                var carroDoBanco = database.Carros.First(registro => registro.Id == carro.Id);
-                carroDoBanco.Modelo = carro.Modelo;
-                carroDoBanco.Marca = carro.Marca;
-                carroDoBanco.Cor = carro.Cor;
-                carroDoBanco.Ano = carro.Ano;
-                carroDoBanco.Sobre = carro.Sobre;
-                carroDoBanco.Imagem = carro.Imagem;
-            }
-            database.SaveChanges();
-            return RedirectToAction("Index");
-        } */
+                database.SaveChanges();
 
-        public IActionResult Salvar(Carro carro, IFormFile files)
-        {
-            if (carro.Id == 0)
-            {
-
-                var nextId = database.Carros.ToList().Last().Id + 1;
                 var uploads = Path.Combine(_hostingEnvironment.WebRootPath, "uploads");
-                if (files.Length > 0)
+                if (files != null && files.Length > 0)
                 {
                     var extensao = Path.GetExtension(files.FileName).ToLower();
-                    if (extensao == ".jpg" || extensao == ".jpeg" || extensao == ".png")
-                    {
-                        var filePath = Path.Combine(uploads, nextId + extensao);
-                        using (var fileStream = new FileStream(filePath, FileMode.Create))
-                        {
-                            files.CopyTo(fileStream);
-                        }
-                        carro.Imagem = "/uploads/" + nextId + extensao;
-                        database.Carros.Add(carro);
-                    }
-                }
-                else
-                {
-                    
-                }
-            }
-            else
-
-            {
-                var carroDoBanco = database.Carros.First(registro => registro.Id == carro.Id);
-                carroDoBanco.Modelo = carro.Modelo;
-                carroDoBanco.Marca = carro.Marca;
-                carroDoBanco.Cor = carro.Cor;
-                carroDoBanco.Ano = carro.Ano;
-                carroDoBanco.Sobre = carro.Sobre;
-                carroDoBanco.Imagem = carro.imagem;
-
-                var uploads = Path.Combine(_hostingEnvironment.WebRootPath, "uploads");
-                if (files.Length > 0)
-                {
-                    var filePath = Path.Combine(uploads, files.ContentType);
+                    var filePath = Path.Combine(uploads, carro.Id + extensao);
                     using (var fileStream = new FileStream(filePath, FileMode.Create))
                     {
                         files.CopyTo(fileStream);
-                    } 
-                    carroDoBanco.Imagem = "/uploads/" + files.FileName;
+                    }
+                    carro.Imagem = "/uploads/" + carro.Id + extensao;
+                }
+            }
+            else
+            {
+                var carroDoBanco = database.Carros.First(registro => registro.Id == carro.Id);
+                if (files != null)
+                {
+                    var uploads = Path.Combine(_hostingEnvironment.WebRootPath, "uploads");
+                    var extensao = Path.GetExtension(files.FileName).ToLower();
+                    System.IO.File.Delete(Path.Combine(_hostingEnvironment.WebRootPath + carroDoBanco.Imagem));
+                    var filePath = Path.Combine(uploads, carro.Id + extensao);
+                    using (var fileStream = new FileStream(filePath, FileMode.Create))
+                    {
+                        files.CopyTo(fileStream);
+                    }
+                    carroDoBanco.Imagem = "/uploads/" + carro.Id + extensao;
+                    carroDoBanco.Modelo = carro.Modelo;
+                    carroDoBanco.Marca = carro.Marca;
+                    carroDoBanco.Cor = carro.Cor;
+                    carroDoBanco.Ano = carro.Ano;
+                    carroDoBanco.Sobre = carro.Sobre;
+                }
+                else
+                {
+                    carroDoBanco.Modelo = carro.Modelo;
+                    carroDoBanco.Marca = carro.Marca;
+                    carroDoBanco.Cor = carro.Cor;
+                    carroDoBanco.Ano = carro.Ano;
+                    carroDoBanco.Sobre = carro.Sobre;
                 }
             }
             database.SaveChanges();
-            //@ViewData("Mensagem");
             return RedirectToAction("Index");
         }
     }
