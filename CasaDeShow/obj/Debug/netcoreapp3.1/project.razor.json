@@ -20506,6 +20506,21 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\ROES\\Desktop\\treinamento_gft_cs\\CasaDeShow\\Views\\Genero\\Delete.cshtml",
+      "TargetPath": "Views\\Genero\\Delete.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\ROES\\Desktop\\treinamento_gft_cs\\CasaDeShow\\Views\\Ingresso\\Details.cshtml",
+      "TargetPath": "Views\\Ingresso\\Details.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\ROES\\Desktop\\treinamento_gft_cs\\CasaDeShow\\Views\\Evento\\Delete.cshtml",
+      "TargetPath": "Views\\Evento\\Delete.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\ROES\\Desktop\\treinamento_gft_cs\\CasaDeShow\\Views\\Shared\\_LoginPartial.cshtml",
       "TargetPath": "Views\\Shared\\_LoginPartial.cshtml",
       "FileKind": "mvc"
@@ -20521,8 +20536,28 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\ROES\\Desktop\\treinamento_gft_cs\\CasaDeShow\\Views\\Local\\Index.cshtml",
+      "TargetPath": "Views\\Local\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\ROES\\Desktop\\treinamento_gft_cs\\CasaDeShow\\Areas\\Identity\\Pages\\_ViewStart.cshtml",
       "TargetPath": "Areas\\Identity\\Pages\\_ViewStart.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\ROES\\Desktop\\treinamento_gft_cs\\CasaDeShow\\Views\\Evento\\Create.cshtml",
+      "TargetPath": "Views\\Evento\\Create.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\ROES\\Desktop\\treinamento_gft_cs\\CasaDeShow\\Views\\Ingresso\\Delete.cshtml",
+      "TargetPath": "Views\\Ingresso\\Delete.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\ROES\\Desktop\\treinamento_gft_cs\\CasaDeShow\\Views\\Genero\\Index.cshtml",
+      "TargetPath": "Views\\Genero\\Index.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -20531,13 +20566,63 @@
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\ROES\\Desktop\\treinamento_gft_cs\\CasaDeShow\\Views\\Home\\Privacy.cshtml",
-      "TargetPath": "Views\\Home\\Privacy.cshtml",
+      "FilePath": "c:\\Users\\ROES\\Desktop\\treinamento_gft_cs\\CasaDeShow\\Views\\Evento\\Index.cshtml",
+      "TargetPath": "Views\\Evento\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\ROES\\Desktop\\treinamento_gft_cs\\CasaDeShow\\Views\\Evento\\Details.cshtml",
+      "TargetPath": "Views\\Evento\\Details.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\ROES\\Desktop\\treinamento_gft_cs\\CasaDeShow\\Views\\Local\\Create.cshtml",
+      "TargetPath": "Views\\Local\\Create.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\ROES\\Desktop\\treinamento_gft_cs\\CasaDeShow\\Views\\Evento\\Edit.cshtml",
+      "TargetPath": "Views\\Evento\\Edit.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\ROES\\Desktop\\treinamento_gft_cs\\CasaDeShow\\Views\\Local\\Edit.cshtml",
+      "TargetPath": "Views\\Local\\Edit.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\ROES\\Desktop\\treinamento_gft_cs\\CasaDeShow\\Views\\Ingresso\\Edit.cshtml",
+      "TargetPath": "Views\\Ingresso\\Edit.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\ROES\\Desktop\\treinamento_gft_cs\\CasaDeShow\\Views\\Local\\Delete.cshtml",
+      "TargetPath": "Views\\Local\\Delete.cshtml",
       "FileKind": "mvc"
     },
     {
       "FilePath": "c:\\Users\\ROES\\Desktop\\treinamento_gft_cs\\CasaDeShow\\Views\\_ViewImports.cshtml",
       "TargetPath": "Views\\_ViewImports.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\ROES\\Desktop\\treinamento_gft_cs\\CasaDeShow\\Views\\Genero\\Create.cshtml",
+      "TargetPath": "Views\\Genero\\Create.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\ROES\\Desktop\\treinamento_gft_cs\\CasaDeShow\\Views\\Ingresso\\Create.cshtml",
+      "TargetPath": "Views\\Ingresso\\Create.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\ROES\\Desktop\\treinamento_gft_cs\\CasaDeShow\\Views\\Genero\\Edit.cshtml",
+      "TargetPath": "Views\\Genero\\Edit.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\ROES\\Desktop\\treinamento_gft_cs\\CasaDeShow\\Views\\Ingresso\\Index.cshtml",
+      "TargetPath": "Views\\Ingresso\\Index.cshtml",
       "FileKind": "mvc"
     },
     {

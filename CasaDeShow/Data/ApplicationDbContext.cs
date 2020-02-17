@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using CasaDeShow.Models;
@@ -17,5 +17,6 @@ namespace CasaDeShow.Data
             : base(options)
         {
         }
+        public DbSet<CasaDeShow.Models.Ingresso> Ingresso { get; set; }
     }
 }
