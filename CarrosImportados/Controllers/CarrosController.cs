@@ -46,23 +46,48 @@ namespace CarrosImportados.Controllers
         }
 
         [HttpPost]
-        public IActionResult Salvar(Carro carro, IFormFile files, int id)
+        public IActionResult Salvar(Carro carro, IFormFile files)
         {
             if (carro.Id == 0)
             {
-                database.Carros.Add(carro);
-                database.SaveChanges();
-
-                var uploads = Path.Combine(_hostingEnvironment.WebRootPath, "uploads");
-                if (files != null && files.Length > 0)
+                if (files != null)
                 {
-                    var extensao = Path.GetExtension(files.FileName).ToLower();
-                    var filePath = Path.Combine(uploads, carro.Id + extensao);
-                    using (var fileStream = new FileStream(filePath, FileMode.Create))
+                    if (files.Length > 0)
                     {
-                        files.CopyTo(fileStream);
+                        var extensao = Path.GetExtension(files.FileName).ToLower();
+                        if (extensao == ".jpg" || extensao == ".jpeg" || extensao == ".png")
+                        {
+                            database.Carros.Add(carro);
+                            database.SaveChanges();
+
+                            var extensao2 = Path.GetExtension(files.FileName).ToLower();
+                            var uploads = Path.Combine(_hostingEnvironment.WebRootPath, "uploads");
+                            var filePath = Path.Combine(uploads, carro.Id + extensao2);
+                            using (var fileStream = new FileStream(filePath, FileMode.Create))
+                            {
+                                files.CopyTo(fileStream);
+                            }
+                            carro.Imagem = "/uploads/" + carro.Id + extensao2;
+                            database.SaveChanges();
+                            TempData["shortMessage"] = "Carro cadastrado com sucesso!";
+                            return RedirectToAction("MensagenAdd");
+                        }
+                        else
+                        {
+                            ViewBag.Message = "Selecione um arquivo nos formatos .jpg .jpeg .png";
+                            return View("Cadastrar");
+                        }
                     }
-                    carro.Imagem = "/uploads/" + carro.Id + extensao;
+                    else
+                    {
+                        ViewBag.Message = "O arquivo deve ter tamanho maior que zero bytes";
+                        return View("Cadastrar");
+                    }
+                }
+                else
+                {
+                    ViewBag.Message = "É necessario incluir uma foto do carro para realizar o cadastro";
+                    return View("Cadastrar");
                 }
             }
             else
@@ -70,20 +95,37 @@ namespace CarrosImportados.Controllers
                 var carroDoBanco = database.Carros.First(registro => registro.Id == carro.Id);
                 if (files != null)
                 {
-                    var uploads = Path.Combine(_hostingEnvironment.WebRootPath, "uploads");
-                    var extensao = Path.GetExtension(files.FileName).ToLower();
-                    System.IO.File.Delete(Path.Combine(_hostingEnvironment.WebRootPath + carroDoBanco.Imagem));
-                    var filePath = Path.Combine(uploads, carro.Id + extensao);
-                    using (var fileStream = new FileStream(filePath, FileMode.Create))
+                    if (files.Length > 0)
                     {
-                        files.CopyTo(fileStream);
+                        var extensao = Path.GetExtension(files.FileName).ToLower();
+                        if (extensao == ".jpg" || extensao == ".jpeg" || extensao == ".png")
+                        {
+                            var extensao2 = Path.GetExtension(files.FileName).ToLower();
+                            var uploads = Path.Combine(_hostingEnvironment.WebRootPath, "uploads");
+                            var filePath = Path.Combine(uploads, carro.Id + extensao2);
+                            System.IO.File.Delete(Path.Combine(_hostingEnvironment.WebRootPath + carroDoBanco.Imagem));
+                            using (var fileStream = new FileStream(filePath, FileMode.Create))
+                            {
+                                files.CopyTo(fileStream);
+                            }
+                            carroDoBanco.Imagem = "/uploads/" + carro.Id + extensao2;
+                            carroDoBanco.Modelo = carro.Modelo;
+                            carroDoBanco.Marca = carro.Marca;
+                            carroDoBanco.Cor = carro.Cor;
+                            carroDoBanco.Ano = carro.Ano;
+                            carroDoBanco.Sobre = carro.Sobre;
+                        }
+                        else
+                        {
+                            ViewBag.Message = "Selecione um arquivo nos formatos .jpg .jpeg .png";
+                            return View("Cadastrar");
+                        }
                     }
-                    carroDoBanco.Imagem = "/uploads/" + carro.Id + extensao;
-                    carroDoBanco.Modelo = carro.Modelo;
-                    carroDoBanco.Marca = carro.Marca;
-                    carroDoBanco.Cor = carro.Cor;
-                    carroDoBanco.Ano = carro.Ano;
-                    carroDoBanco.Sobre = carro.Sobre;
+                    else
+                    {
+                        ViewBag.Message = "O arquivo deve ter tamanho maior que zero bytes";
+                        return View("Cadastrar");
+                    }
                 }
                 else
                 {
@@ -93,9 +135,15 @@ namespace CarrosImportados.Controllers
                     carroDoBanco.Ano = carro.Ano;
                     carroDoBanco.Sobre = carro.Sobre;
                 }
+                    database.SaveChanges();
+                    return RedirectToAction("Index");
             }
-            database.SaveChanges();
-            return RedirectToAction("Index");
+        }
+
+        public ActionResult MensagenAdd()
+        {
+            ViewBag.Message = TempData["shortMessage"];
+            return View("Cadastrar");
         }
     }
 }

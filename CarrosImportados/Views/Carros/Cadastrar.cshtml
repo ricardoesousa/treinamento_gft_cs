@@ -1,6 +1,6 @@
 @model CarrosImportados.Models.Carro
 
-
+<body>
 <h2>Cadastro de Carros</h2>
 
 <form class= "form-horizontal" asp-controller="Carros" asp-action="Salvar" method="POST" enctype="multipart/form-data">
@@ -40,9 +40,20 @@
     <input type="file" class="form-group-file" asp-for="Imagem" name="files" accept=".png, .jpg, .jpeg"
     required oninvalid="this.setCustomValidity('Selecione uma imagem para o carro')" 
     oninput="try{setCustomValidity('')}catch(e){}"/>
-    <small id="imgHelp" class="form-text text-muted">Faça o upload de uma imagem no formato .jpg .jpeg.png.</small>
+    <small id="imgHelp" class="form-text text-muted">Faça o upload de uma imagem no formato jpg, jpeg ou png.</small>
     </div>
 
     <button class="btn btn-success">Cadastrar</button>
-
+    <a class="btn btn-secondary" href="/Carros/Index">Voltar</a>
 </form>
+
+@if(ViewBag.Message != null)
+{
+    <script type="text/javascript">
+        window.onload = function()
+        {
+            alert("@ViewBag.Message");
+        };
+    </script>
+}
+</body>

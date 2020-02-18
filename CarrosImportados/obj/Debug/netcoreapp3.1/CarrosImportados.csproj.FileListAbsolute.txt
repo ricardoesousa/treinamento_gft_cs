@@ -113,3 +113,4 @@ C:\Users\ricar\OneDrive - Fatec Centro Paula Souza\projects\treinamento_gft_cs\C
 C:\Users\ricar\OneDrive - Fatec Centro Paula Souza\projects\treinamento_gft_cs\CarrosImportados\obj\Debug\netcoreapp3.1\CarrosImportados.dll
 C:\Users\ricar\OneDrive - Fatec Centro Paula Souza\projects\treinamento_gft_cs\CarrosImportados\obj\Debug\netcoreapp3.1\CarrosImportados.pdb
 C:\Users\ROES\Desktop\treinamento_gft_cs\CarrosImportados\obj\Debug\netcoreapp3.1\Razor\Views\Carros\Editar.cshtml.g.cs
+C:\Users\ricar\OneDrive - Fatec Centro Paula Souza\projects\treinamento_gft_cs\CarrosImportados\obj\Debug\netcoreapp3.1\Razor\Views\Carros\Editar.cshtml.g.cs
