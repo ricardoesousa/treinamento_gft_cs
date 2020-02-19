@@ -103,7 +103,7 @@ namespace CarrosImportados.Controllers
                             var extensao2 = Path.GetExtension(files.FileName).ToLower();
                             var uploads = Path.Combine(_hostingEnvironment.WebRootPath, "uploads");
                             var filePath = Path.Combine(uploads, carro.Id + extensao2);
-                            System.IO.File.Delete(Path.Combine(_hostingEnvironment.WebRootPath + carroDoBanco.Imagem));
+                            System.IO.File.Delete(_hostingEnvironment.WebRootPath + carroDoBanco.Imagem);
                             using (var fileStream = new FileStream(filePath, FileMode.Create))
                             {
                                 files.CopyTo(fileStream);

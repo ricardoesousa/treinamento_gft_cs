@@ -1,11 +1,11 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
+using GerenciadorDeEventos.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using GerenciadorDeEventos.Models;
 
 namespace GerenciadorDeEventos.Controllers
 {
@@ -22,8 +22,6 @@ namespace GerenciadorDeEventos.Controllers
         {
             return View();
         }
-
-        
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()

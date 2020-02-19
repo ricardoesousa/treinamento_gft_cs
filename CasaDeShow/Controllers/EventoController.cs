@@ -25,24 +25,6 @@ namespace CasaDeShow.Controllers
             return View(await _context.Eventos.ToListAsync());
         }
 
-        // GET: Evento/Details/5
-        public async Task<IActionResult> Details(int? id)
-        {
-            if (id == null)
-            {
-                return NotFound();
-            }
-
-            var evento = await _context.Eventos
-                .FirstOrDefaultAsync(m => m.Id == id);
-            if (evento == null)
-            {
-                return NotFound();
-            }
-
-            return View(evento);
-        }
-
         // GET: Evento/Create
         public IActionResult Create()
         {
@@ -55,7 +37,7 @@ namespace CasaDeShow.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Nome,PrecoIngresso,Data,QtdIngressos,Capacidade")] Evento evento)
+        public async Task<IActionResult> Create(Evento evento)
         {
             if (ModelState.IsValid)
             {

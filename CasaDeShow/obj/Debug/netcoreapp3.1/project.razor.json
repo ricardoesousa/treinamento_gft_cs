@@ -20571,11 +20571,6 @@
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\ROES\\Desktop\\treinamento_gft_cs\\CasaDeShow\\Views\\Evento\\Details.cshtml",
-      "TargetPath": "Views\\Evento\\Details.cshtml",
-      "FileKind": "mvc"
-    },
-    {
       "FilePath": "c:\\Users\\ROES\\Desktop\\treinamento_gft_cs\\CasaDeShow\\Views\\Local\\Create.cshtml",
       "TargetPath": "Views\\Local\\Create.cshtml",
       "FileKind": "mvc"

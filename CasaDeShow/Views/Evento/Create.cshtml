@@ -23,9 +23,9 @@
                 <span asp-validation-for="PrecoIngresso" class="text-danger"></span>
             </div>
                  <div class="form-group">
-                <label asp-for="Local" class="control-label"></label>
-                <select asp-for="Local" asp-items="@(new SelectList(ViewBag.Local,"Id","Nome"))"></select>
-                <span asp-validation-for="Local" class="text-danger"></span>
+                <label asp-for="LocalId" class="control-label"></label>
+                <select asp-for="LocalId" asp-items='@(new SelectList(ViewBag.Local,"1","Nome"))'></select>
+                <span asp-validation-for="LocalId" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="Data" class="control-label"></label>

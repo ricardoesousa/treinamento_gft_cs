@@ -20,5 +20,7 @@ namespace CasaDeShow.Models
         public int QtdIngressos { get; set; }
         [Required(ErrorMessage = "Dado obrigatório")]
         public int Capacidade { get; set; }
+        [Required(ErrorMessage = "Dado obrigatório")]
+        public int LocalId { get; set; }
     }
 }

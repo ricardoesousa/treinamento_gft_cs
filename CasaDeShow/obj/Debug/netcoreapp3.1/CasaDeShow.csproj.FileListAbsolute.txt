@@ -156,7 +156,6 @@ C:\Users\ROES\Desktop\treinamento_gft_cs\CasaDeShow\bin\Debug\netcoreapp3.1\zh-H
 C:\Users\ROES\Desktop\treinamento_gft_cs\CasaDeShow\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\Users\ROES\Desktop\treinamento_gft_cs\CasaDeShow\obj\Debug\netcoreapp3.1\Razor\Views\Evento\Create.cshtml.g.cs
 C:\Users\ROES\Desktop\treinamento_gft_cs\CasaDeShow\obj\Debug\netcoreapp3.1\Razor\Views\Evento\Delete.cshtml.g.cs
-C:\Users\ROES\Desktop\treinamento_gft_cs\CasaDeShow\obj\Debug\netcoreapp3.1\Razor\Views\Evento\Details.cshtml.g.cs
 C:\Users\ROES\Desktop\treinamento_gft_cs\CasaDeShow\obj\Debug\netcoreapp3.1\Razor\Views\Evento\Edit.cshtml.g.cs
 C:\Users\ROES\Desktop\treinamento_gft_cs\CasaDeShow\obj\Debug\netcoreapp3.1\Razor\Views\Evento\Index.cshtml.g.cs
 C:\Users\ROES\Desktop\treinamento_gft_cs\CasaDeShow\obj\Debug\netcoreapp3.1\Razor\Views\Genero\Create.cshtml.g.cs

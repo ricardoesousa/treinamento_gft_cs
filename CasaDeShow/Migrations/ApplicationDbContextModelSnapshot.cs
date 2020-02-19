@@ -29,13 +29,14 @@ namespace CasaDeShow.Migrations
                     b.Property<DateTime>("Data")
                         .HasColumnType("datetime(6)");
 
-                    b.Property<int?>("GeneroId")
+                    b.Property<int>("GeneroId")
                         .HasColumnType("int");
 
-                    b.Property<int?>("LocalId")
+                    b.Property<int>("LocalId")
                         .HasColumnType("int");
 
                     b.Property<string>("Nome")
+                        .IsRequired()
                         .HasColumnType("longtext CHARACTER SET utf8mb4");
 
                     b.Property<float>("PrecoIngresso")
@@ -74,7 +75,7 @@ namespace CasaDeShow.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    b.Property<int?>("EventoId")
+                    b.Property<int>("EventoId")
                         .HasColumnType("int");
 
                     b.Property<int>("Quantidade")
@@ -94,9 +95,11 @@ namespace CasaDeShow.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("Endereco")
+                        .IsRequired()
                         .HasColumnType("longtext CHARACTER SET utf8mb4");
 
                     b.Property<string>("Nome")
+                        .IsRequired()
                         .HasColumnType("longtext CHARACTER SET utf8mb4");
 
                     b.HasKey("Id");
@@ -304,18 +307,24 @@ namespace CasaDeShow.Migrations
                 {
                     b.HasOne("CasaDeShow.Models.Genero", "Genero")
                         .WithMany()
-                        .HasForeignKey("GeneroId");
+                        .HasForeignKey("GeneroId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.HasOne("CasaDeShow.Models.Local", "Local")
                         .WithMany()
-                        .HasForeignKey("LocalId");
+                        .HasForeignKey("LocalId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("CasaDeShow.Models.Ingresso", b =>
                 {
                     b.HasOne("CasaDeShow.Models.Evento", "Evento")
                         .WithMany()
-                        .HasForeignKey("EventoId");
+                        .HasForeignKey("EventoId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
