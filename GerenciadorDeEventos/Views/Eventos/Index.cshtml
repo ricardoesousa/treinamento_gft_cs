@@ -9,6 +9,11 @@
 <p>
     <a asp-action="Create">Create New</a>
 </p>
+
+<div class="text-danger">
+@TempData["Erro"]
+</div>
+
 <table class="table">
     <thead>
         <tr>
@@ -63,3 +68,5 @@
 }
     </tbody>
 </table>
+
+

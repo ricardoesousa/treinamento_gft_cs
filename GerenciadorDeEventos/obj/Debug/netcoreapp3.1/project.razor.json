@@ -20586,13 +20586,13 @@
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\ROES\\Desktop\\treinamento_gft_cs\\GerenciadorDeEventos\\Views\\Home\\Privacy.cshtml",
-      "TargetPath": "Views\\Home\\Privacy.cshtml",
+      "FilePath": "c:\\Users\\ROES\\Desktop\\treinamento_gft_cs\\GerenciadorDeEventos\\Views\\Locais\\Index.cshtml",
+      "TargetPath": "Views\\Locais\\Index.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\ROES\\Desktop\\treinamento_gft_cs\\GerenciadorDeEventos\\Views\\Locais\\Index.cshtml",
-      "TargetPath": "Views\\Locais\\Index.cshtml",
+      "FilePath": "c:\\Users\\ROES\\Desktop\\treinamento_gft_cs\\GerenciadorDeEventos\\Areas\\Identity\\Pages\\Account\\Manage\\_ManageNav.cshtml",
+      "TargetPath": "Areas\\Identity\\Pages\\Account\\Manage\\_ManageNav.cshtml",
       "FileKind": "mvc"
     },
     {

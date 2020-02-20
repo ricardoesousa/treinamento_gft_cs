@@ -47,8 +47,17 @@ namespace GerenciadorDeEventos.Controllers
         // GET: Eventos/Create
         public IActionResult Create()
         {
+            if(_context.Locais.Count() == 0)
+            {
+                TempData["Erro"] = "Não é possível cadastrar um evento sem um local cadastrado";
+                return RedirectToAction (nameof(Index));
+
+            }
+            else{
+
             ViewBag.Local = _context.Locais.ToList();
             return View();
+            }
         }
 
         // POST: Eventos/Create

@@ -1,8 +1,42 @@
-﻿@{
+﻿@model IEnumerable<GerenciadorDeEventos.Models.Evento>
+@{
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+
+
+
+<div class="Container-fluid">
+    <h2 class="text-center jumbotron">Próximos Eventos</h2>
+
+
+    <hr>
+
+    @foreach (var evento in Model)
+    {
+        <div class="row">
+
+            <div class="col-sm-3">
+               <h3>Imagem</h3>     
+            </div>
+
+            <div class="col-sm-3">
+                <p><b>Evento: </b></p>
+                <p>@evento.NomeEvento</p>
+            </div>
+
+            <div class="col-sm-3">
+                <p><b>Data:</b></p>
+                <p>@evento.DataEvento</p>
+            </div>
+
+                <div class="col-sm-3 text-right">
+                <a href="/Eventos/Comprar/@evento.Id">Comprar</a>
+            </div>
+
+        </div>
+
+        <hr>
+    }
+
 </div>
