@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ROES\\Desktop\\treinamento_gft_cs\\CasaDeShow\\CasaDeShow.csproj": {}
+    "C:\\Users\\ricar\\OneDrive - Fatec Centro Paula Souza\\projects\\treinamento_gft_cs\\CasaDeShow\\CasaDeShow.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ROES\\Desktop\\treinamento_gft_cs\\CasaDeShow\\CasaDeShow.csproj": {
+    "C:\\Users\\ricar\\OneDrive - Fatec Centro Paula Souza\\projects\\treinamento_gft_cs\\CasaDeShow\\CasaDeShow.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ROES\\Desktop\\treinamento_gft_cs\\CasaDeShow\\CasaDeShow.csproj",
+        "projectUniqueName": "C:\\Users\\ricar\\OneDrive - Fatec Centro Paula Souza\\projects\\treinamento_gft_cs\\CasaDeShow\\CasaDeShow.csproj",
         "projectName": "CasaDeShow",
-        "projectPath": "C:\\Users\\ROES\\Desktop\\treinamento_gft_cs\\CasaDeShow\\CasaDeShow.csproj",
-        "packagesPath": "C:\\Users\\ROES\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ROES\\Desktop\\treinamento_gft_cs\\CasaDeShow\\obj\\",
+        "projectPath": "C:\\Users\\ricar\\OneDrive - Fatec Centro Paula Souza\\projects\\treinamento_gft_cs\\CasaDeShow\\CasaDeShow.csproj",
+        "packagesPath": "C:\\Users\\ricar\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ricar\\OneDrive - Fatec Centro Paula Souza\\projects\\treinamento_gft_cs\\CasaDeShow\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\ROES\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\ricar\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"

@@ -4,11 +4,12 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>Index</h1>
+<h1><b>Eventos</b></h1>
 
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
+<div class="container text-right">
+    <a class="btn btn-info " asp-action="Create">Criar Novo Evento</a>
+    <p></p>
+</div>
 
 <div class="text-danger">
 @TempData["Erro"]
@@ -17,6 +18,9 @@
 <table class="table">
     <thead>
         <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ImagemEvento)
+            </th>
             <th>
                 @Html.DisplayNameFor(model => model.NomeEvento)
             </th>
@@ -36,11 +40,13 @@
                 @Html.DisplayNameFor(model => model.LocalEvento)
             </th>
             <th></th>
-        </tr>
     </thead>
     <tbody>
 @foreach (var item in Model) {
         <tr>
+            <td>
+                <img src="@Html.DisplayFor(modelItem => item.ImagemEvento)" class="img-fluid" width="100" height="100">
+            </td>
             <td>
                 @Html.DisplayFor(modelItem => item.NomeEvento)
             </td>
@@ -59,10 +65,9 @@
             <td>
                 @Html.DisplayFor(modelItem => item.LocalEvento.NomeLocal)
             </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            <td class="text-right">
+                <a class="btn btn-warning" asp-action="Edit" asp-route-id="@item.Id">Alterar</a> |
+                <a class="btn btn-danger" asp-action="Delete" asp-route-id="@item.Id">Excluir</a>
             </td>
         </tr>   
 }

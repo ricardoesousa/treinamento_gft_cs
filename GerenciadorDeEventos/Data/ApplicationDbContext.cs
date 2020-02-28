@@ -12,13 +12,7 @@ namespace GerenciadorDeEventos.Data
          public DbSet<Evento> Eventos {get; set;}
         public DbSet<Local > Locais {get; set;}
         public DbSet<Venda> Vendas {get; set;}
-
-        /*protected override void OnModelCreating(ModelBuilder builder){
-            base.OnModelCreating(builder);
-
-            builder.Entity<Venda>().HasOne(venda => venda.EventoSelecionado);
-        }*/
-         
+   
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
             : base(options)
         {

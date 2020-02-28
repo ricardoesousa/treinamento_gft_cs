@@ -4,37 +4,43 @@
     ViewData["Title"] = "Edit";
 }
 
-<h1>Edit</h1>
+<h1><B>Alterar Local</B></h1>
 
-<h4>Evento</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
-        <form asp-action="Edit">
-  <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <form asp-action="Edit" enctype="multipart/form-data">
+            <input type="hidden" asp-for="Id"/>
+
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
                 <label asp-for="NomeEvento" class="control-label"></label>
-                <input asp-for="NomeEvento" class="form-control" />
+                <input asp-for="NomeEvento" class="form-control" required/>
                 <span asp-validation-for="NomeEvento" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="QtdIngressos" class="control-label"></label>
-                <input asp-for="QtdIngressos" class="form-control" />
+                <input asp-for="QtdIngressos" class="form-control" required/>
                 <span asp-validation-for="QtdIngressos" class="text-danger"></span>
+            </div>
+              <div class="form-group">
+                <label asp-for="DescricaoEvento" class="control-label"></label>
+                <input asp-for="DescricaoEvento" class="form-control" required/>
+                <span asp-validation-for="DescricaoEvento" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="DataEvento" class="control-label"></label>
-                <input asp-for="DataEvento" class="form-control" />
+                <input asp-for="DataEvento" class="form-control" required/>
                 <span asp-validation-for="DataEvento" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="VlrIngresso" class="control-label">Valor do Ingresso</label>
-                <input asp-for="VlrIngresso" class="form-control" />
+                <input asp-for="VlrIngresso" class="form-control" required/>
                 <span asp-validation-for="VlrIngresso" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="GeneroEvento" class="control-label"></label>
-                <select  asp-for="GeneroEvento">
+                <select  asp-for="GeneroEvento" required>
                     <option value="Rock">Rock</option>
                     <option>Jazz</option>
                     <option>Pop</option>
@@ -46,17 +52,21 @@
             </div>
             <div class="form-group">
                 <label asp-for="LocalEvento" class="control-label"></label>
-                <select asp-for="LocalEvento.Id" asp-items='@(new SelectList(ViewBag.Local,"Id","NomeLocal"))'></select>
+                <select asp-for="LocalEventoId" asp-items='@(new SelectList(ViewBag.Local,"Id","NomeLocal"))' required></select>
                 <span asp-validation-for="LocalEvento" class="text-danger"></span>
             </div>
+
             <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
+            <input type="file" class="form-group-file" asp-for="ImagemEvento" name="files" accept=".png, .jpg, .jpeg"/>
+            <small id="imgHelp" class="form-text text-muted">Caso queira alterar a imagem, faça o upload de um arquivo no formato .jpg .jpeg.png.</small>
+            </div>
+
+            <div class="form-group">
+                <input type="submit" value="Salvar" class="btn btn-primary" /> |
+                <a class="btn btn-secondary" asp-action="Index">Voltar</a>
             </div>
         </form>
     </div>
 </div>
 
-<div>
-    <a asp-action="Index">Back to List</a>
-</div>
 

@@ -4,45 +4,29 @@
     ViewData["Title"] = "Details";
 }
 
-<h1>Details</h1>
+<h1><b>@Html.DisplayFor(model => model.NomeEvento)</b></h1>
 
-<div>
-    <h4>Evento</h4>
+
+    <h4>Data: @Html.DisplayFor(model => model.DataEvento)</h4>
+    <h4>Local: @Html.DisplayFor(model => model.LocalEvento.NomeLocal)</h4>
+      <h4>Gênero: @Html.DisplayFor(model => model.GeneroEvento)</h4>
     <hr />
-    <dl class="row">
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.NomeEvento)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.NomeEvento)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.QtdIngressos)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.QtdIngressos)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.DataEvento)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.DataEvento)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.VlrIngresso)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.VlrIngresso)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.GeneroEvento)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.GeneroEvento)
-        </dd>
-    </dl>
-</div>
-<div>
-    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
-    <a asp-action="Index">Back to List</a>
-</div>
+
+    <div class="row container">
+        <div class="col-sm-4">
+            <img src="@Html.DisplayFor(model => model.ImagemEvento)" class="img-fluid" width="600" height="600">
+        </div>
+
+        <div class="col-sm-8">
+            <h5><b>@Html.DisplayNameFor(model => model.DescricaoEvento)
+            </b></h5>
+            <h6>@Html.DisplayFor(model => model.DescricaoEvento)
+            </h6>     
+        </div>
+
+    </div>
+
+<hr />
+           
+        
+

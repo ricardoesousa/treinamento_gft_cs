@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace GerenciadorDeEventos.Migrations
 {
-    public partial class AddOthers : Migration
+    public partial class Evento : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -48,30 +48,13 @@ namespace GerenciadorDeEventos.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Eventos",
-                columns: table => new
-                {
-                    Id = table.Column<int>(nullable: false)
-                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
-                    NomeEvento = table.Column<string>(nullable: true),
-                    QtdIngressos = table.Column<int>(nullable: false),
-                    DataEvento = table.Column<DateTime>(nullable: false),
-                    VlrIngresso = table.Column<float>(nullable: false),
-                    GeneroEvento = table.Column<string>(nullable: true)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Eventos", x => x.Id);
-                });
-
-            migrationBuilder.CreateTable(
                 name: "Locais",
                 columns: table => new
                 {
                     Id = table.Column<int>(nullable: false)
                         .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
-                    NomeLocal = table.Column<string>(nullable: true),
-                    EnderecoLocal = table.Column<string>(nullable: true)
+                    NomeLocal = table.Column<string>(nullable: false),
+                    EnderecoLocal = table.Column<string>(nullable: false)
                 },
                 constraints: table =>
                 {
@@ -185,13 +168,42 @@ namespace GerenciadorDeEventos.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "Eventos",
+                columns: table => new
+                {
+                    Id = table.Column<int>(nullable: false)
+                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
+                    NomeEvento = table.Column<string>(nullable: false),
+                    QtdIngressos = table.Column<int>(nullable: false),
+                    DataEvento = table.Column<DateTime>(nullable: false),
+                    VlrIngresso = table.Column<decimal>(nullable: false),
+                    GeneroEvento = table.Column<string>(nullable: false),
+                    LocalEventoId = table.Column<int>(nullable: false),
+                    ImagemEvento = table.Column<string>(nullable: true),
+                    DescricaoEvento = table.Column<string>(nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Eventos", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_Eventos_Locais_LocalEventoId",
+                        column: x => x.LocalEventoId,
+                        principalTable: "Locais",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "Vendas",
                 columns: table => new
                 {
                     Id = table.Column<int>(nullable: false)
                         .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
                     EventoSelecionadoId = table.Column<int>(nullable: true),
-                    QtdIngressos = table.Column<int>(nullable: false)
+                    QtdIngressos = table.Column<int>(nullable: false),
+                    VlrIngresso = table.Column<int>(nullable: false),
+                    DataVenda = table.Column<DateTime>(nullable: false),
+                    ValorTotal = table.Column<decimal>(nullable: false)
                 },
                 constraints: table =>
                 {
@@ -201,7 +213,7 @@ namespace GerenciadorDeEventos.Migrations
                         column: x => x.EventoSelecionadoId,
                         principalTable: "Eventos",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateIndex(
@@ -242,6 +254,11 @@ namespace GerenciadorDeEventos.Migrations
                 unique: true);
 
             migrationBuilder.CreateIndex(
+                name: "IX_Eventos_LocalEventoId",
+                table: "Eventos",
+                column: "LocalEventoId");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_Vendas_EventoSelecionadoId",
                 table: "Vendas",
                 column: "EventoSelecionadoId");
@@ -265,9 +282,6 @@ namespace GerenciadorDeEventos.Migrations
                 name: "AspNetUserTokens");
 
             migrationBuilder.DropTable(
-                name: "Locais");
-
-            migrationBuilder.DropTable(
                 name: "Vendas");
 
             migrationBuilder.DropTable(
@@ -278,6 +292,9 @@ namespace GerenciadorDeEventos.Migrations
 
             migrationBuilder.DropTable(
                 name: "Eventos");
+
+            migrationBuilder.DropTable(
+                name: "Locais");
         }
     }
 }

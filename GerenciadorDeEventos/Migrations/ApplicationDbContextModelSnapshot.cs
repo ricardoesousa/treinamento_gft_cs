@@ -14,7 +14,7 @@ namespace GerenciadorDeEventos.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "3.1.1")
+                .HasAnnotation("ProductVersion", "3.1.2")
                 .HasAnnotation("Relational:MaxIdentifierLength", 64);
 
             modelBuilder.Entity("GerenciadorDeEventos.Models.Evento", b =>
@@ -26,20 +26,29 @@ namespace GerenciadorDeEventos.Migrations
                     b.Property<DateTime>("DataEvento")
                         .HasColumnType("datetime(6)");
 
-                    b.Property<string>("GeneroEvento")
+                    b.Property<string>("DescricaoEvento")
+                        .IsRequired()
                         .HasColumnType("longtext CHARACTER SET utf8mb4");
 
-                    b.Property<int?>("LocalEventoId")
+                    b.Property<string>("GeneroEvento")
+                        .IsRequired()
+                        .HasColumnType("longtext CHARACTER SET utf8mb4");
+
+                    b.Property<string>("ImagemEvento")
+                        .HasColumnType("longtext CHARACTER SET utf8mb4");
+
+                    b.Property<int>("LocalEventoId")
                         .HasColumnType("int");
 
                     b.Property<string>("NomeEvento")
+                        .IsRequired()
                         .HasColumnType("longtext CHARACTER SET utf8mb4");
 
                     b.Property<int>("QtdIngressos")
                         .HasColumnType("int");
 
-                    b.Property<float>("VlrIngresso")
-                        .HasColumnType("float");
+                    b.Property<decimal>("VlrIngresso")
+                        .HasColumnType("decimal(65,30)");
 
                     b.HasKey("Id");
 
@@ -55,9 +64,11 @@ namespace GerenciadorDeEventos.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("EnderecoLocal")
+                        .IsRequired()
                         .HasColumnType("longtext CHARACTER SET utf8mb4");
 
                     b.Property<string>("NomeLocal")
+                        .IsRequired()
                         .HasColumnType("longtext CHARACTER SET utf8mb4");
 
                     b.HasKey("Id");
@@ -71,10 +82,19 @@ namespace GerenciadorDeEventos.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
+                    b.Property<DateTime>("DataVenda")
+                        .HasColumnType("datetime(6)");
+
                     b.Property<int?>("EventoSelecionadoId")
                         .HasColumnType("int");
 
                     b.Property<int>("QtdIngressos")
+                        .HasColumnType("int");
+
+                    b.Property<decimal>("ValorTotal")
+                        .HasColumnType("decimal(65,30)");
+
+                    b.Property<int>("VlrIngresso")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
@@ -284,7 +304,9 @@ namespace GerenciadorDeEventos.Migrations
                 {
                     b.HasOne("GerenciadorDeEventos.Models.Local", "LocalEvento")
                         .WithMany()
-                        .HasForeignKey("LocalEventoId");
+                        .HasForeignKey("LocalEventoId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("GerenciadorDeEventos.Models.Venda", b =>

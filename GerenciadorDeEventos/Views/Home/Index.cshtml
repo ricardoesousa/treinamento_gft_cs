@@ -1,42 +1,27 @@
 ﻿@model IEnumerable<GerenciadorDeEventos.Models.Evento>
+@using Microsoft.AspNetCore.Components.Web;
+
 @{
     ViewData["Title"] = "Home Page";
 }
 
 
-
-
-<div class="Container-fluid">
-    <h2 class="text-center jumbotron">Próximos Eventos</h2>
-
-
-    <hr>
-
-    @foreach (var evento in Model)
-    {
-        <div class="row">
-
-            <div class="col-sm-3">
-               <h3>Imagem</h3>     
-            </div>
-
-            <div class="col-sm-3">
-                <p><b>Evento: </b></p>
-                <p>@evento.NomeEvento</p>
-            </div>
-
-            <div class="col-sm-3">
-                <p><b>Data:</b></p>
-                <p>@evento.DataEvento</p>
-            </div>
-
-                <div class="col-sm-3 text-right">
-                <a href="/Eventos/Comprar/@evento.Id">Comprar</a>
-            </div>
-
+<div class="card-columns">
+@foreach (var evento in Model)
+{
+    <div class="card">
+        <div class="card-img" style="background-image: url('@evento.ImagemEvento')">
         </div>
-
-        <hr>
-    }
-
+        <div class="card-body">
+            <h5 class="card-title text-center"><b>@evento.NomeEvento</b></h5>
+             <h6 class="text-center">@evento.DataEvento</h6>
+             <h6 class="text-center">Ingressos Disponíveis: @evento.QtdIngressos</h6>
+        </div>
+        <div class="card-footer text-center">
+            <a asp-action="Details" asp-controller="Eventos" class="btn btn-primary" asp-route-id="@evento.Id">Detalhes</a>
+            
+        </div>
+    </div>
+}
 </div>
+

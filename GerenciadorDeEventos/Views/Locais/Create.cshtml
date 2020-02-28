@@ -4,9 +4,8 @@
     ViewData["Title"] = "Create";
 }
 
-<h1>Create</h1>
+<h1><B>Criar Local</B></h1>
 
-<h4>Local</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
@@ -14,22 +13,22 @@
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
                 <label asp-for="NomeLocal" class="control-label"></label>
-                <input asp-for="NomeLocal" class="form-control" />
+                <input asp-for="NomeLocal" class="form-control" required/>
                 <span asp-validation-for="NomeLocal" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="EnderecoLocal" class="control-label"></label>
-                <input asp-for="EnderecoLocal" class="form-control" />
+                <input asp-for="EnderecoLocal" class="form-control" required/>
                 <span asp-validation-for="EnderecoLocal" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
+                <input type="submit" value="Confirmar" class="btn btn-primary" /> |
+                <a class="btn btn-secondary" asp-action="Index">Voltar</a>
             </div>
         </form>
     </div>
 </div>
 
 <div>
-    <a asp-action="Index">Back to List</a>
 </div>
 
