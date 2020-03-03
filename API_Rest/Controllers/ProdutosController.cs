@@ -1,3 +1,4 @@
+using System;
 using System.Linq;
 using API_Rest.Data;
 using API_Rest.Models;
@@ -27,7 +28,15 @@ namespace API_Rest.Controllers
         [HttpGet("{id}")]
         public IActionResult Get(int id)
         {
-            return Ok("Wesley Williams " + id);
+            try
+            {
+                Produto produto = database.Produtos.First(p => p.Id == id);
+                return Ok(produto);
+            }
+            catch (Exception e)
+            {
+                return BadRequest(new { msg = "Id inválido" });
+            }
         }
 
         [HttpPost]
@@ -40,7 +49,7 @@ namespace API_Rest.Controllers
             database.Produtos.Add(p);
             database.SaveChanges();
 
-            return Ok(new {msg = "Produto criado com sucesso!"});
+            return Ok(new { msg = "Produto criado com sucesso!" });
         }
 
         public class ProdutoTemp
