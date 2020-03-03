@@ -53,6 +53,23 @@ namespace API_Rest.Controllers
             return new ObjectResult("");
         }
 
+        [HttpDelete("{id}")]
+        public IActionResult Delete(int id)
+        {
+            try
+            {
+                Produto produto = database.Produtos.First(p => p.Id == id);
+                database.Produtos.Remove(produto);
+                database.SaveChanges();
+                return Ok();
+            }
+            catch (Exception e)
+            {
+                Response.StatusCode = 404;
+                return new ObjectResult("");
+            }
+        }
+
         public class ProdutoTemp
         {
             public string Nome { get; set; }
