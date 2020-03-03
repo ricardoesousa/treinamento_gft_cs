@@ -1,3 +1,4 @@
+using System.Linq;
 using API_Rest.Data;
 using API_Rest.Models;
 using Microsoft.AspNetCore.Mvc;
@@ -19,7 +20,8 @@ namespace API_Rest.Controllers
         [HttpGet]
         public IActionResult Get()
         {
-            return Ok(new { nome = "Victor Lima", empresa = "School of net" });
+            var produtos = database.Produtos.ToList();
+            return Ok(produtos);
         }
 
         [HttpGet("{id}")]
