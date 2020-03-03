@@ -35,7 +35,8 @@ namespace API_Rest.Controllers
             }
             catch (Exception e)
             {
-                return BadRequest(new { msg = "Id inválido" });
+                Response.StatusCode = 404;
+                return new ObjectResult("");
             }
         }
 
@@ -48,8 +49,8 @@ namespace API_Rest.Controllers
             p.Preco = pTemp.Preco;
             database.Produtos.Add(p);
             database.SaveChanges();
-
-            return Ok(new { msg = "Produto criado com sucesso!" });
+            Response.StatusCode = 201;
+            return new ObjectResult("");
         }
 
         public class ProdutoTemp
