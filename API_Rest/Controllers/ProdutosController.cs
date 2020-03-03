@@ -84,6 +84,39 @@ namespace API_Rest.Controllers
             }
         }
 
+        [HttpPatch("{id}")]
+        public IActionResult Patch([FromBody]Produto produto)
+        {
+            if (produto.Id > 0)
+            {
+                try
+                {
+                    var p = database.Produtos.First(ptemp => ptemp.Id == produto.Id);
+                    if (p != null)
+                    {
+                        p.Nome = produto.Nome != null ? produto.Nome : p.Nome;
+                    }
+                    else
+                    {
+                        Response.StatusCode = 404;
+                        return new ObjectResult(new { msg = "produto não encontrado!" });
+                    }
+
+                }
+                catch
+                {
+                    Response.StatusCode = 404;
+                    return new ObjectResult(new { msg = "produto não encontrado!" });
+                }
+            }
+            else
+            {
+                Response.StatusCode = 400;
+                return new ObjectResult(new { msg = "O Id do produto é inválido!" });
+
+            }
+        }
+
         public class ProdutoTemp
         {
             public string Nome { get; set; }
