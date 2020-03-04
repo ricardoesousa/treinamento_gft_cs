@@ -84,7 +84,7 @@ namespace API_Rest.Controllers
             }
         }
 
-        [HttpPatch("{id}")]
+        [HttpPatch]
         public IActionResult Patch([FromBody]Produto produto)
         {
             if (produto.Id > 0)
@@ -95,6 +95,9 @@ namespace API_Rest.Controllers
                     if (p != null)
                     {
                         p.Nome = produto.Nome != null ? produto.Nome : p.Nome;
+                        p.Preco = produto.Preco != 0 ? produto.Preco : p.Preco;
+                        database.SaveChanges();
+                        return Ok();
                     }
                     else
                     {
