@@ -38,3 +38,8 @@ C:\Users\ROES\Desktop\treinamento_gft_cs\API_Rest\bin\Debug\netcoreapp3.1\Micros
 C:\Users\ROES\Desktop\treinamento_gft_cs\API_Rest\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.Abstractions.dll
 C:\Users\ROES\Desktop\treinamento_gft_cs\API_Rest\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Options.dll
 C:\Users\ROES\Desktop\treinamento_gft_cs\API_Rest\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Primitives.dll
+C:\Users\ROES\Desktop\treinamento_gft_cs\API_Rest\bin\Debug\netcoreapp3.1\Microsoft.OpenApi.dll
+C:\Users\ROES\Desktop\treinamento_gft_cs\API_Rest\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\ROES\Desktop\treinamento_gft_cs\API_Rest\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\ROES\Desktop\treinamento_gft_cs\API_Rest\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\ROES\Desktop\treinamento_gft_cs\API_Rest\obj\Debug\netcoreapp3.1\API_Rest.MvcApplicationPartsAssemblyInfo.cs

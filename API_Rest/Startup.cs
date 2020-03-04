@@ -29,6 +29,10 @@ namespace API_Rest
         {
             services.AddDbContext<ApplicationDbContext>(options => options.UseMySql(Configuration.GetConnectionString("DefaultConnection")));
             services.AddControllers();
+            services.AddSwaggerGen(config =>
+            {
+                config.SwaggerDoc("v1", new Microsoft.OpenApi.Models.OpenApiInfo { Title = "API DE PRODUTOS", Version = "v1" });
+            });
 
         }
 
@@ -50,6 +54,15 @@ namespace API_Rest
             {
                 endpoints.MapControllers();
             });
+            app.UseSwagger(config =>
+            {
+                config.RouteTemplate = "victor/{documentName}/swagger.json";
+            });
+            app.UseSwaggerUI(config =>
+            {
+                config.SwaggerEndpoint("/victor/v1/swagger.json", "v1 docs");
+            });
+
         }
     }
 }
