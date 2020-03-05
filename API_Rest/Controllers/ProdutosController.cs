@@ -3,6 +3,7 @@ using System.Linq;
 using API_Rest.Data;
 using API_Rest.Models;
 using Microsoft.AspNetCore.Mvc;
+using API_Rest.HATEOAS;
 
 namespace API_Rest.Controllers
 {
@@ -13,9 +14,14 @@ namespace API_Rest.Controllers
     {
 
         private readonly ApplicationDbContext database;
+        private HATEOAS.HATEOAS HATEOAS;
         public ProdutosController(ApplicationDbContext database)
         {
             this.database = database;
+            HATEOAS = new HATEOAS.HATEOAS("localhost:5001/api/v1/Produtos");
+            HATEOAS.AddAction("GET_INFO", "GET");
+            HATEOAS.AddAction("DELETE_PRODUCT", "DELETE");
+            HATEOAS.AddAction("EDIT_PRODUCT", "PATCH");
         }
 
         [HttpGet]
@@ -31,7 +37,10 @@ namespace API_Rest.Controllers
             try
             {
                 Produto produto = database.Produtos.First(p => p.Id == id);
-                return Ok(produto);
+                ProdutoContainer produtoHATEOAS = new ProdutoContainer();
+                produtoHATEOAS.produto = produto;
+                produtoHATEOAS.links = HATEOAS.GetActions();
+                return Ok(produtoHATEOAS);
             }
             catch (Exception e)
             {
@@ -124,6 +133,12 @@ namespace API_Rest.Controllers
         {
             public string Nome { get; set; }
             public float Preco { get; set; }
+        }
+
+        public class ProdutoContainer
+        {
+            public Produto produto { get; set; }
+            public Link[] links { get; set; }
         }
     }
 }
