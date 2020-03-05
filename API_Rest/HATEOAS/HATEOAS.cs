@@ -24,9 +24,20 @@ namespace API_Rest.HATEOAS
             actions.Add(new Link(this.protocol + this.url, rel, method));
         }
 
-        public Link[] GetActions()
+        public Link[] GetActions(string sufix)
         {
-            return actions.ToArray();
+            Link[] templinks = new Link[actions.Count];
+
+            for(int i = 0; i < templinks.Length; i++)
+            {
+                templinks[i] = new Link(actions[i].href, actions[i].rel, actions[i].method);
+            }
+
+            foreach (var link in templinks)
+            {
+                link.href = link.href + "/" + sufix;
+            }
+            return templinks;
         }
     }
 }

@@ -4,6 +4,7 @@ using API_Rest.Data;
 using API_Rest.Models;
 using Microsoft.AspNetCore.Mvc;
 using API_Rest.HATEOAS;
+using System.Collections.Generic;
 
 namespace API_Rest.Controllers
 {
@@ -28,7 +29,15 @@ namespace API_Rest.Controllers
         public IActionResult Get()
         {
             var produtos = database.Produtos.ToList();
-            return Ok(produtos);
+            List<ProdutoContainer>produtosHATEOAS = new List<ProdutoContainer>();
+            foreach(var prod in produtos)
+            {
+                ProdutoContainer produtoHATEOAS = new ProdutoContainer();
+                produtoHATEOAS.produto = prod;
+                produtoHATEOAS.links = HATEOAS.GetActions(prod.Id.ToString());
+                produtosHATEOAS.Add(produtoHATEOAS);
+            }
+            return Ok(produtosHATEOAS);
         }
 
         [HttpGet("{id}")]
@@ -39,7 +48,7 @@ namespace API_Rest.Controllers
                 Produto produto = database.Produtos.First(p => p.Id == id);
                 ProdutoContainer produtoHATEOAS = new ProdutoContainer();
                 produtoHATEOAS.produto = produto;
-                produtoHATEOAS.links = HATEOAS.GetActions();
+                produtoHATEOAS.links = HATEOAS.GetActions(produto.Id.ToString());
                 return Ok(produtoHATEOAS);
             }
             catch (Exception e)
