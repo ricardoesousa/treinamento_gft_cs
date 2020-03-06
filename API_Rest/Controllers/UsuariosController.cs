@@ -6,6 +6,8 @@ using API_Rest.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
+using System.Collections.Generic;
+using System.Security.Claims;
 
 namespace API_Rest.Controllers
 {
@@ -44,11 +46,17 @@ namespace API_Rest.Controllers
                         var chaveSimetrica = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(chaveDeSeguranca));
                         var credenciaisDeAcesso = new SigningCredentials(chaveSimetrica, SecurityAlgorithms.HmacSha256Signature);
 
+                        var claims = new List<Claim>();
+                        claims.Add(new Claim("id",usuario.Id.ToString()));
+                        claims.Add(new Claim("email",usuario.Email));
+                        claims.Add(new Claim(ClaimTypes.Role,"Admin"));
+
                         var JWT = new JwtSecurityToken(
                             issuer: "ricardo",
                             expires: DateTime.Now.AddHours(1),
                             audience: "usuario_comum",
-                            signingCredentials: credenciaisDeAcesso
+                            signingCredentials: credenciaisDeAcesso,
+                            claims: claims
                         );
                         return Ok (new JwtSecurityTokenHandler().WriteToken(JWT));
 
