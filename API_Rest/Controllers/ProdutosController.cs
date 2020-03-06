@@ -5,11 +5,13 @@ using API_Rest.Models;
 using Microsoft.AspNetCore.Mvc;
 using API_Rest.HATEOAS;
 using System.Collections.Generic;
+using Microsoft.AspNetCore.Authorization;
 
 namespace API_Rest.Controllers
 {
     [Route("api/v1/[controller]")]
     [ApiController]
+    [Authorize]
     public class ProdutosController : ControllerBase
 
     {
