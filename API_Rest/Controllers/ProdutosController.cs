@@ -27,12 +27,18 @@ namespace API_Rest.Controllers
             HATEOAS.AddAction("EDIT_PRODUCT", "PATCH");
         }
 
+        [HttpGet("teste")]
+        public IActionResult TesteClaims()
+        {
+            return Ok(HttpContext.User.Claims.First(claim => claim.Type.ToString().Equals("id", StringComparison.InvariantCultureIgnoreCase)).Value);
+        }
+
         [HttpGet]
         public IActionResult Get()
         {
             var produtos = database.Produtos.ToList();
-            List<ProdutoContainer>produtosHATEOAS = new List<ProdutoContainer>();
-            foreach(var prod in produtos)
+            List<ProdutoContainer> produtosHATEOAS = new List<ProdutoContainer>();
+            foreach (var prod in produtos)
             {
                 ProdutoContainer produtoHATEOAS = new ProdutoContainer();
                 produtoHATEOAS.produto = prod;
